@@ -1,1 +1,122 @@
+1. What teams at Vineti are you interested in and why? (Dev or QA) 
+I'am interested in Dev because I like to code and see the result of it.
 
+2. What is your favorite programming language and why?
+It's hard to me choose my favorite programming language.I don’t have experience with many programming languages.
+  I hope in future I'll have my favourite programming language.
+
+3. What is a linked list?
+Linked list is node sequence, which has head and tail. Each node knows its reference, its value and points to the next node's reference.
+Such linked list is called singly linked list. There is also doubly linked list, here the node also points to the previous node.
+
+4. You work in an ice cream shop and step into the back for a few minutes. You return and see a large group of people waiting. How would you serve them?
+Lets say we have two types of ice-cream: chocolate and vanilla. I will ask the crowd what type of ice-cream they want and have the count for each ice-cream type.
+If the counts differ greatly, firstly I'll make ice-cream which has small count. Otherwise, if the amounts are close, I'll make some amout from one type and then another,
+continue till all customers are satisfied. This way I will manage to keep all customers happy. 
+ 
+5. How would you test a pen?
+I will read in pen box what type of pen it is and how it is used. I will grab the pen and test its comfortability, then I will use it and see if it meets the
+requirements. Baset on it I will do my decision.
+ 
+6. As a test engineer in [Amazon](https://www.amazon.com/) what would you test first (assuming authentication functionality is already covered)?
+I will test the search box ,if serch box show us written words continuation. 
+
+7. You have a list of numbers from one to one million and there is __a__ missing number. How would you find the missing number?
+var arr = [2,3,4,5];
+var min = _.min(arr);
+var result = [];
+for (var i = 0; i < min; i++) {
+    result.push(i);
+}
+result // [0, 1];
+
+8. How would you determine the angle between the hour-hand and minute-hand of a clock at 3:20?
+The angle between two hours are 360/12=30. When the minute-hand is at 4 (20 minutes),
+ the hour-hand is already past 1/3 of an hour.The angle between them is 30 - 30*1/3 = 20.
+
+9. How would you determine if a number is a power of two?
+function PowerOfTwo(n){
+  var x = Math.pow(2, Math.round (Math.log(n) / Math.log(2)) );
+  return x;
+}
+
+10. How would you remove duplicates from a list?
+let array_names_with_duplicates = ['Arman','Gevorg','Arman','Artur','Gevorg','Ashot','Rafik']
+
+function removeDuplicates(arr){
+    let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
+        }
+    }
+    return unique_array
+}
+
+console.log(removeDuplicates(array_names_with_duplicates)); // [ 'Arman', 'Gevorg', 'Artur', 'Ashot', 'Rafik' ]
+
+11. How would you determine if a string has all unique characters?
+function is_unique(str) {
+  var obj = {};
+  for(var i=0;i<str.length;++i) {
+    var ch = str[i];
+    if(obj[ch]) return false; else obj[ch] = true;
+  }
+  return true;
+}
+// test:
+console.log(is_unique("abcdefgh")); // true
+console.log(is_unique("gg")); // false
+
+12. How would you reverse a string?
+function reverseString(str) {
+    return str;
+}
+reverseString("ItDoReverse");
+
+13. How would you compress a string such that 'AAABCCDDDD' becomes 'A3BC2D4'? Only compress the string if it saves space.
+I dont know.
+  public void compressString(String s) {
+        StringBuilder result = new StringBuilder();
+        int count = 1;
+        for (int i = 1; i <= s.length(); ++i) {
+            if (i != s.length() && s.charAt(i) == s.charAt(i - 1)) {
+                ++count;
+            } else {
+                if (count > 1) {
+                    result.append(s.charAt(i - count)).append(String.valueOf(count));
+                } else {
+                    result.append(s.charAt(i - count));
+                }
+                count = 1;
+            }
+        }
+        System.out.println(s.length() == result.length() ? s : result);
+  }
+
+14. Given an array of 0's and 1's, how would you move all of the 0's to the beginning of the array and all of the 1's to the end of the array?
+  public int[] convertArray(int[] array) {
+        int index = 0;
+        for (int i = 0; i < array.length; ++i) {
+            if (array[i] == 0) {
+                int temp = array[index];
+                array[index] = array[i];
+                array[i] = temp;
+                ++index;
+            }
+        }
+
+        return array;
+  }
+  
+15. How would you design a vending machine or a toaster?
+I dont understand the questions.
+
+16. You have two lightbulbs at a 100-story building. You want to find the lowest floor at which the bulbs will break when dropped. How would you find the floor using the least number of drops?
+17. If you have a square room with no roof, and you had four pillars you had to plant on the walls so that each pillar touched two walls, how would you do it?
+I don't understand this question.But I'll put pillar on every angle of the room.
+
+18. Given 9 balls all of which weigh the same except for one, what is the minimum of weighings necessary to find the ball weighs more (or less)?
+I'd divide the balls in groups (1, 2, 3), where every group contains 3 balls.I will compare groups each other and find it.
+19. How would you solve the N Queens problem? [**Bonus**]
+20. How would you find the longest palindrome in a string? [**Bonus**]
